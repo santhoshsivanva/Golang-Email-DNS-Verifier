@@ -1,0 +1,21 @@
+DNS (Domain Name System) is a hierarchical and decentralized naming system for computers, 
+services, or other resources connected to the Internet or a private network. 
+DNS is used to translate domain names into IP addresses, 
+which enables devices to communicate with each other over the internet.
+
+DNS records are a set of data stored in a DNS server that map domain names to IP addresses 
+or other resources on the internet. Some common types of DNS records include:
+
+A record: Maps a domain name to an IP address
+
+MX record: Specifies the mail exchange server for a domain
+CNAME record: Maps an alias name to another name
+TXT record: Allows arbitrary text to be associated with a domain
+MX (Mail Exchange) records are used to specify the mail server responsible for accepting email messages for a domain. When an email message is sent to a recipient, the sender's mail server looks up the MX record of the recipient's domain to determine where to send the message.
+
+SPF (Sender Policy Framework) records are used to specify which mail servers are authorized to send email messages on behalf of a domain. SPF records help to prevent email spam and phishing attacks by allowing email servers to verify that incoming email messages are coming from authorized sources.
+
+DMARC (Domain-based Message Authentication, Reporting, and Conformance) records are used to specify how email messages that fail SPF or DKIM (DomainKeys Identified Mail) checks should be handled. DMARC records help to prevent email spoofing and phishing attacks by allowing email servers to verify that incoming email messages are authentic and have not been tampered with.
+
+
+
