@@ -1,28 +1,57 @@
-# Golang-Email-DNS-Verifier
- Email-DNS-Verfier using golang net packge
+# Golang Email DNS Verifier
+Golang Email DNS Verifier is a simple command-line tool that can be used to verify email addresses and check the DNS records of the email domain.
+It is built using the Golang programming language and relies on third-party packages to perform email and DNS validation.
+
+# Features
+Verify the syntax of an email address.
+Check the DNS records of the email domain to ensure it exists.
+Check the MX records of the email domain to ensure it can receive emails.
+Check if the email address is a disposable email address.
+Check if the email domain is a known temporary email domain.
+
+# Installation
+Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/santhoshsivanva/Golang-Email-DNS-Verifier.git
+```
+
+# Install the required dependencies:
+
+```go
+cd Golang-Email-DNS-Verifier
+go mod download
+```
+
+# Build the application:
+
+```go
+go build main.go
+```
+
+# Run the application:
+
+```bash
+./main
+```
+
+# Usage
+To use Golang Email DNS Verifier, simply run the command-line tool and enter an email address to verify. The application will perform various checks on the email address and provide feedback on its validity.
+
+```yaml
+$ ./main
+Enter an email address to verify: john.doe@example.com
+Validating email address: john.doe@example.com
+Syntax: valid
+DNS: valid
+MX: valid
+Disposable: no
+Temporary: no
+```
+
+# Credits
+This project was developed by santhoshsivanva as part of a personal project to learn Golang and email verification techniques.
 
 
-# Description about DNS and other terminology
-
-DNS (Domain Name System) is a hierarchical and decentralized naming system for computers, 
-services, or other resources connected to the Internet or a private network. 
-DNS is used to translate domain names into IP addresses, 
-which enables devices to communicate with each other over the internet.
-
-DNS records are a set of data stored in a DNS server that map domain names to IP addresses 
-or other resources on the internet. Some common types of DNS records include:
-
-A record: Maps a domain name to an IP address
-
-MX record: Specifies the mail exchange server for a domain
-
-CNAME record: Maps an alias name to another name
-
-TXT record: Allows arbitrary text to be associated with a domain
-
-MX (Mail Exchange) records are used to specify the mail server responsible for accepting email messages for a domain. When an email message is sent to a recipient, the sender's mail server looks up the MX record of the recipient's domain to determine where to send the message.
-
-SPF (Sender Policy Framework) records are used to specify which mail servers are authorized to send email messages on behalf of a domain. SPF records help to prevent email spam and phishing attacks by allowing email servers to verify that incoming email messages are coming from authorized sources.
-
-DMARC (Domain-based Message Authentication, Reporting, and Conformance) records are used to specify how email messages that fail SPF or DKIM (DomainKeys Identified Mail) checks should be handled. DMARC records help to prevent email spoofing and phishing attacks by allowing email servers to verify that incoming email messages are authentic and have not been tampered with.
-
+# License
+This project is licensed under the MIT License. See the LICENSE file for details.
